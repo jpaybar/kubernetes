@@ -44,10 +44,21 @@ set http_proxy=http://proxy.xxxx.xxxx.net:8080
 set https_proxy=http://proxy.xxxx.xxxx.net:8080
 ```
 
+On Powershell:
+
+```Powershell
+$ENV:http_proxy="http://proxy.xxxx.xxxx.net:8080"
+$ENV:https_proxy="http://proxy.xxxx.xxxx.net:8080"
+```
+
 This way you will be able to download the image and boot the VM on VirtualBox, but you will not be able to configure the cluster during the installation and a red exclamation mark will appear saying that the IP address of the Node is not excluded from the Proxy, we will have to add it by executing:
 
 ```bash
-set no_proxy=node_IP
+set no_proxy=nodeIP
+```
+
+```Powershell
+$ENV:no_proxy="nodeIP"
 ```
 
 Now, you may run:
