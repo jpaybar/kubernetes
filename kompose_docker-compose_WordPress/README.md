@@ -225,7 +225,7 @@ kubectl port-forward service/wordpress 80:80
 
 Now we can access WordPress from our browser:
 
-![install_wordpress.PNG](C:\LABO\vagrant\KUBERNETES\kompose_docker-compose_WordPress\_images\install_wordpress.PNG)
+![install_wordpress.PNG](https://github.com/jpaybar/Kubernetes/blob/main/kompose_docker-compose_WordPress/_images/install_wordpress.PNG)
 
 
 
@@ -300,7 +300,7 @@ minikube service wordpress
 
 Now we can access `WordPress` from our browser. The URL will be the IP of the node of our cluster and the port that `Kubernetes` has randomly generated and that will be between 30.000-40.000:
 
-![wordpress_service.PNG](C:\LABO\vagrant\KUBERNETES\kompose_docker-compose_WordPress\_images\wordpress_service.PNG)
+![wordpress_service.PNG](https://github.com/jpaybar/Kubernetes/blob/main/kompose_docker-compose_WordPress/_images/wordpress_service.PNG)
 
 
 
@@ -308,7 +308,7 @@ Now we can access `WordPress` from our browser. The URL will be the IP of the no
 
 If we are running Minikube from VirtualBox, we must add a NAT rule like the following:
 
-![nat_rule.PNG](C:\LABO\vagrant\KUBERNETES\kompose_docker-compose_WordPress\_images\nat_rule.PNG)
+![nat_rule.PNG](https://github.com/jpaybar/Kubernetes/blob/main/kompose_docker-compose_WordPress/_images/nat_rule.PNG)
 
 
 
