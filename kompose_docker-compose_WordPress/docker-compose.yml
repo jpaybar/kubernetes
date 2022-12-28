@@ -1,0 +1,39 @@
+# https://docs.docker.com/compose/compose-file/compose-file-v3/
+# https://hub.docker.com/_/wordpress
+# https://kompose.io/
+# https://github.com/kubernetes/kompose
+# kompose convert -f docker-compose.yml
+# kubectl apply -f ./
+# kubectl delete -f ./
+
+version: "3.8"
+
+services:
+  wordpress:
+    image: wordpress:latest
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: user
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress:/var/www/html
+  mysql:
+    image: mysql:latest
+    restart: always
+    ports:
+      - 3306
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - mysql:/var/lib/mysql
+
+volumes:
+  wordpress:
+  mysql:
